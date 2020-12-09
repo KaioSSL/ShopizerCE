@@ -1,15 +1,23 @@
 <?php
 include_once('Pagamento.php');
 
-class Cartao_Credito extends Pagamento
+class Cartao_Credito
 {
+    private $id;
+    private $data_cadastro;
+    private $titular;
+    private $cpf_titular;
     private $num_cartao;
     private $cod_seg;
     private $validade;
-    private $n_parcelas;
-    private $vlr_parcelas;
-    private $vencimento;
-
+    private $id_cliente;
+    
+    public function getId_cliente(){
+        return $this->id_cliente;
+    }
+    public function setId_cliente($id_cliente){
+        $this->id_cliente = $id_cliente;
+    }
     public function getNum_cartao()
     {
         return $this->num_cartao;
@@ -21,18 +29,6 @@ class Cartao_Credito extends Pagamento
     public function getValidade()
     {
         return $this->validade;
-    }
-    public function getN_parcelas()
-    {
-        return $this->n_parcelas;
-    }
-    public function getVlr_parcelas()
-    {
-        return $this->vlr_parcelas;
-    }
-    public function getVencimento()
-    {
-        return $this->vencimento;
     }
     public function setNum_carta($num_cartao)
     {
@@ -46,16 +42,36 @@ class Cartao_Credito extends Pagamento
     {
         $this->validade = $validade;
     }
-    public function setN_parcelas($n_parcelas)
+    public function getId()
     {
-        $this->n_parcelas = $n_parcelas;
+        return $this->id;
     }
-    public function setVlr_parcelas($vlr_parcelas)
+    public function getData_cadastro()
     {
-        $this->vlr_parcelas = $vlr_parcelas;
+        return $this->data_cadastro;
     }
-    public function setVencimento($vencimento)
+    public function getTitular()
     {
-        $this->vencimento = $vencimento;
+        return $this->titular;
+    }
+    public function getCPF_titular()
+    {
+        return $this->cpf_titular;
+    }
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+    public function setData_cadastro($data_cadastro)
+    {
+        $this->data_cadastro = $data_cadastro;
+    }
+    public function setTitular($titular)
+    {
+        $this->titular = $titular;
+    }
+    public function setCPF_titular($cpf_titular)
+    {
+        $this->cpf_titular = $cpf_titular;
     }
 }

@@ -8,7 +8,15 @@ class Endereco
     private $cidade;
     private $estado;
     private $complemento;
+    private $id_cliente;
 
+
+    public function getId_cliente(){
+        return $this->id_cliente;
+    }
+    public function setId_cliente(){
+        return $this->id_cliente;
+    }
     public function getId()
     {
         return $this->id;

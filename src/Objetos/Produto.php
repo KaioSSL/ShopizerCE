@@ -2,7 +2,7 @@
 class Produto
 {
     private $id;
-    private $desc;
+    private $desc_;
     private $desc_det;
     private $altura;
     private $comprimento;
@@ -19,9 +19,9 @@ class Produto
     {
         return $this->id;
     }
-    public function getDesc()
+    public function getDesc_()
     {
-        return $this->desc;
+        return $this->desc_;
     }
     public function getDesc_det()
     {
@@ -56,9 +56,9 @@ class Produto
     {
         $this->id = $id;
     }
-    public function setDesc($desc)
+    public function setDesc_($desc_)
     {
-        $this->desc = $desc;
+        $this->desc_ = $desc_;
     }
     public function setDesc_det($desc_det)
     {

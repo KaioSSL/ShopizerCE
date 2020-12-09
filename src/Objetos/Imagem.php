@@ -4,8 +4,8 @@ class Imagem
 {
     private $id;
     private $id_produto;
-    private $file;
-    private $desc;
+    private $path;
+    private $desc_;
 
     public function getId()
     {
@@ -15,13 +15,13 @@ class Imagem
     {
         return $this->id_produto;
     }
-    public function getFile()
+    public function getPath()
     {
-        return $this->file;
+        return $this->path;
     }
-    public function getDesc()
+    public function getDesc_()
     {
-        return $this->desc;
+        return $this->desc_;
     }
 
     public function setId($id)
@@ -32,12 +32,12 @@ class Imagem
     {
         $this->id_produto = $id_produto;
     }
-    public function setFile($file)
+    public function setPath($path)
     {
-        $this->file = $file;
+        $this->path = $path;
     }
-    public function setDesc($desc)
+    public function setDesc_($desc_)
     {
-        $this->desc = $desc;
+        $this->desc_ = $desc_;
     }
 }

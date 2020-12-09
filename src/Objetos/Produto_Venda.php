@@ -2,16 +2,16 @@
 
 class Produto_Venda
 {
-    private $id_prod_venda;
+    private $id;
     private $id_produto;
     private $id_venda;
     private $qtd_produto;
     private $vlr_unit;
     private $vlr_total;
 
-    public function getId_prod_venda()
+    public function getId()
     {
-        return $this->id_prod_venda;
+        return $this->id;
     }
     public function getId_venda()
     {
@@ -33,9 +33,9 @@ class Produto_Venda
     {
         return $this->vlr_total;
     }
-    public function setId_prod_venda($id_prod_venda)
+    public function setId($id)
     {
-        $this->id_prod_venda = $id_prod_venda;
+        $this->id = $id;
     }
     public function setId_produto($id_produto)
     {
