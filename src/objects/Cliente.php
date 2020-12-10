@@ -1,6 +1,7 @@
 <?php
 class Cliente
 {
+    private $id;
     private $cpf;
     private $nome;
     private $login;
@@ -9,8 +10,23 @@ class Cliente
     private $nasc;
     private $cadastro;
 
-    public function Cliente()
+    public function __construct($id,$cpf,$nome,$login,$senha,$email,$nasc)
     {
+        $this->setId($id);
+        $this->setCPF($cpf);
+        $this->setNome($nome);
+        $this->setLogin($login);
+        $this->setSenha($senha);
+        $this->setEmail($email);
+        $this->setNasc($nasc);
+        
+    }
+    
+    public function getId(){
+        return $this->id;
+    }
+    public function setId($id){
+        $this->id = $id;
     }
 
     public function getCPF()
